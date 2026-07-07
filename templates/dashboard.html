@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CyberDetect</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/admin">Admin Login</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+<div class="stats">
+
+<div class="card">
+<h2>{{ total_users }}</h2>
+<p>Total Users</p>
+</div>
+
+<div class="card">
+<h2>{{ total_predictions }}</h2>
+<p>Total Predictions</p>
+</div>
+
+</div>
+
+    
+<table class="dashboard-table">
+
+<tr>
+    <th>User</th>
+    <th>Statement</th>
+    <th>Prediction</th>
+    <th>Time</th>
+</tr>
+
+{% for row in activities %}
+
+<tr>
+
+<td>{{ row[1] }}</td>
+
+<td class="statement">
+{{ row[2] }}
+</td>
+
+<td>
+
+{% if "not" in row[3]|lower %}
+
+<span class="safe-tag">
+Non Cyberbullying
+</span>
+
+{% else %}
+
+<span class="danger-tag">
+Cyberbullying
+</span>
+
+{% endif %}
+
+</td>
+
+<td>{{ row[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+</div>
+
+</body>
+</html>
+

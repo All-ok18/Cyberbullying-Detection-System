@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+CyberDetect
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/login">Login</a></li>
+
+<li><a href="/signup">Signup</a></li>
+
+<li><a href="/about">About Us</a></li>
+
+<li><a href="/admin">Admin Login</a></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h1>
+Cyberbullying Detection
+</h1>
+
+<form
+action="/logout"
+method="GET">
+
+<button
+class="logout-btn"
+type="submit">
+Logout
+</button>
+
+</form>
+
+<form
+action="/predict"
+method="POST">
+
+<textarea
+name="sentence"
+placeholder="Type message..."></textarea>
+
+<button type="submit">
+Predict
+</button>
+
+</form>
+
+{% if prediction %}
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <p style="white-space: pre-line;">
+            {{ prediction }}
+        </p>
+
+        <button class="ok-btn" onclick="closePopup()">
+            OK
+        </button>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+<script>
+
+function closePopup(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+</script>
+
+</body>
+
+</html>
+

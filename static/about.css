@@ -1,0 +1,205 @@
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Segoe UI';
+
+}
+
+
+body{
+
+background:
+
+linear-gradient(
+135deg,
+#4f46e5,
+#7c3aed
+);
+
+min-height:100vh;
+
+}
+
+
+/* NAVBAR */
+
+nav{
+
+height:80px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 60px;
+
+background:
+
+rgba(
+255,
+255,
+255,
+0.1
+);
+
+}
+
+
+.logo{
+
+color:white;
+
+font-size:32px;
+
+font-weight:700;
+
+}
+
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+}
+
+
+nav ul li a:hover{
+
+color:#ddd;
+
+}
+
+
+
+/* MAIN */
+
+.main{
+
+padding-top:120px;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+.main h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+
+.main p{
+
+font-size:20px;
+
+margin-bottom:60px;
+
+}
+
+
+
+/* BOX */
+
+.boxes{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+/* BOX */
+
+.box{
+
+width:350px;
+
+min-height:350px;
+
+padding:30px;
+
+background:white;
+
+color:#222;   /* ← change text color */
+
+border-radius:20px;
+
+box-shadow:
+
+0 20px 40px
+rgba(
+0,
+0,
+0,
+0.2
+);
+
+}
+
+
+/* HEADINGS */
+
+.box h2{
+
+color:#111;
+
+margin-bottom:20px;
+
+}
+
+
+/* LIST */
+
+.box ul{
+
+text-align:left;
+
+padding-left:20px;
+
+color:#333;
+
+}
+
+
+/* LIST ITEMS */
+
+.box li{
+
+color:#444;
+
+margin-bottom:15px;
+
+font-size:18px;
+
+}

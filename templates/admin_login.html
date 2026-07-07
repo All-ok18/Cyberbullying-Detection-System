@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+
+CyberDetect
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+
+<li><a href="/login">Login</a></li>
+
+<li><a href="/signup">Signup</a></li>
+
+<li><a href="/about">About Us</a></li>
+
+<li><a href="/admin">Admin Login</a></li>
+
+</ul>
+
+</nav>
+
+
+<div class="container">
+
+    <h1>Admin Login</h1>
+
+    {% if error %}
+        <p style="color: #b91c1c; text-align:center; margin-bottom: 15px;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="/admin">
+
+        <div class="input-box">
+            <input
+                type="email"
+                name="email"
+                placeholder="Admin Email"
+                required>
+        </div>
+
+        <div class="input-box">
+            <input
+                type="password"
+                name="password"
+                placeholder="Admin Password"
+                required>
+        </div>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+
